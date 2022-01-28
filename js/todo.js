@@ -11,8 +11,7 @@ function saveToDos() {
 
 function deletTodo(event) {
     const li = event.target.parentElement;
-    function deletId(Todo) {return Todo.id !== parseInt(li.id)}
-    toDos = toDos.filter(deletId)
+    toDos = toDos.filter((Todo)=>Todo.id !== parseInt(li.id))
     li.remove();
     saveToDos();
 }
